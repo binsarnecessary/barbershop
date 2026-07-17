@@ -17,12 +17,12 @@ const barbers = [
 ];
 
 const gallery = [
-  { emoji: "💈", bg: "from-[#3a3226] to-[#141210]" },
-  { emoji: "✂️", bg: "from-[#d4a24e] to-[#6b4e1e]" },
-  { emoji: "🪒", bg: "from-[#2b2721] to-[#0d0b09]" },
-  { emoji: "🧴", bg: "from-[#4a3f2c] to-[#1d1a16]" },
-  { emoji: "🛋️", bg: "from-[#33291a] to-[#141210]" },
-  { emoji: "☕", bg: "from-[#6b4e1e] to-[#2b2721]" },
+  "/img/gallery-1.jpg",
+  "/img/gallery-2.jpg",
+  "/img/gallery-3.jpg",
+  "/img/gallery-4.jpg",
+  "/img/gallery-5.jpg",
+  "/img/gallery-6.jpg",
 ];
 
 const plans = [
@@ -54,10 +54,10 @@ export default function Home() {
     <>
       {/* Hero */}
       <section className="relative overflow-hidden py-28 text-center">
-        <span aria-hidden className="absolute -left-10 top-10 text-[240px] opacity-[0.05]">💈</span>
-        <span aria-hidden className="absolute -right-10 bottom-0 text-[240px] opacity-[0.05]">✂️</span>
+        <img src="/img/hero.jpg" alt="" aria-hidden="true" className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-20" />
+        <div className="pointer-events-none absolute inset-0 bg-body-bg/70" />
         <div className="relative mx-auto max-w-4xl px-5">
-          <div className="text-lg tracking-[10px] text-accent">━━ 👑 ━━</div>
+          <div className="text-lg tracking-[10px] text-accent">━━ ✦ ━━</div>
           <h1 className="mt-5 text-5xl uppercase tracking-wide md:text-7xl">
             Look Sharp.<br />Feel <span className="text-accent">Royal.</span>
           </h1>
@@ -123,10 +123,8 @@ export default function Home() {
           <Eyebrow>Gallery</Eyebrow>
           <h2 className="text-3xl uppercase tracking-wide md:text-4xl">Di Dalam Crown</h2>
           <div className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-3">
-            {gallery.map((g, i) => (
-              <div key={i} className={`flex aspect-square items-center justify-center rounded-2xl bg-gradient-to-br text-5xl transition-transform hover:scale-[1.03] ${g.bg}`}>
-                {g.emoji}
-              </div>
+            {gallery.map((src, i) => (
+              <img key={i} src={src} alt={`Crown Barber ${i + 1}`} loading="lazy" className="aspect-square w-full rounded-2xl object-cover transition-transform hover:scale-[1.03]" />
             ))}
           </div>
         </div>
