@@ -1,7 +1,7 @@
 export const site = {
   name: "Crown Barber",
   logo: "👑",
-  whatsapp: "6281234567890", // TODO: ganti nomor asli
+  whatsapp: "6287830377139", // TODO: ganti nomor asli
   waGreeting: "Halo Crown Barber! Saya mau booking cukur.",
   address: "Jl. Mahkota No. 12, Blok M, Jakarta Selatan",
   hours: "Setiap hari, 10.00 – 21.00 WIB",
@@ -37,7 +37,7 @@ export const footer = {
     {
       title: "Hubungi",
       links: [
-        { href: "https://wa.me/6281234567890", label: "WhatsApp" },
+        { href: "https://wa.me/6287830377139", label: "WhatsApp" },
         { href: "#", label: "Instagram" },
         { href: "#", label: "Google Maps" },
       ],
